@@ -85,13 +85,13 @@ const Resume = () => {
             >
               <FontAwesomeIcon icon={faEye} /> {showPreview ? 'Hide Preview' : 'Preview Resume'}
             </button>
-            <a 
-              href="/resume upt.pdf" 
+          <a 
+            href="/resume upt.pdf" 
               download="Sai_Charan_Veerlapati_Resume.pdf" 
-              className="download-btn"
-            >
-              <FontAwesomeIcon icon={faDownload} /> Download Resume
-            </a>
+            className="download-btn"
+          >
+            <FontAwesomeIcon icon={faDownload} /> Download Resume
+          </a>
           </div>
         </div>
         
@@ -106,51 +106,51 @@ const Resume = () => {
             />
           </div>
         ) : (
-          <div className="resume-content">
-            <div className="resume-section">
-              <h2 className="resume-section-title">Education</h2>
-              <div className="timeline">
-                {education.map((item) => (
-                  <div key={item.id} className="timeline-item">
-                    <div className="timeline-marker"></div>
-                    <div className="timeline-content">
-                      <h3 className="timeline-title">{item.degree}</h3>
-                      <div className="timeline-info">
-                        <span className="timeline-institution">{item.institution}</span>
-                        <span className="timeline-location">{item.location}</span>
-                        <span className="timeline-period">{item.period}</span>
-                      </div>
-                      <p className="timeline-description">{item.description}</p>
+        <div className="resume-content">
+          <div className="resume-section">
+            <h2 className="resume-section-title">Education</h2>
+            <div className="timeline">
+              {education.map((item) => (
+                <div key={item.id} className="timeline-item">
+                  <div className="timeline-marker"></div>
+                  <div className="timeline-content">
+                    <h3 className="timeline-title">{item.degree}</h3>
+                    <div className="timeline-info">
+                      <span className="timeline-institution">{item.institution}</span>
+                      <span className="timeline-location">{item.location}</span>
+                      <span className="timeline-period">{item.period}</span>
                     </div>
+                    <p className="timeline-description">{item.description}</p>
                   </div>
-                ))}
-              </div>
-            </div>
-            
-            <div className="resume-section">
-              <h2 className="resume-section-title">Projects</h2>
-              <div className="timeline">
-                {projects.map((item) => (
-                  <div key={item.id} className="timeline-item">
-                    <div className="timeline-marker"></div>
-                    <div className="timeline-content">
-                      <h3 className="timeline-title">{item.position}</h3>
-                      <div className="timeline-info">
-                        <span className="timeline-company">{item.company}</span>
-                        {item.location && <span className="timeline-location">{item.location}</span>}
-                        <span className="timeline-period">{item.period}</span>
-                      </div>
-                      <ul className="timeline-responsibilities">
-                        {item.responsibilities.map((responsibility, index) => (
-                          <li key={index}>{responsibility}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
+          
+          <div className="resume-section">
+              <h2 className="resume-section-title">Projects</h2>
+            <div className="timeline">
+                {projects.map((item) => (
+                <div key={item.id} className="timeline-item">
+                  <div className="timeline-marker"></div>
+                  <div className="timeline-content">
+                    <h3 className="timeline-title">{item.position}</h3>
+                    <div className="timeline-info">
+                      <span className="timeline-company">{item.company}</span>
+                        {item.location && <span className="timeline-location">{item.location}</span>}
+                      <span className="timeline-period">{item.period}</span>
+                    </div>
+                    <ul className="timeline-responsibilities">
+                      {item.responsibilities.map((responsibility, index) => (
+                        <li key={index}>{responsibility}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
         )}
       </div>
     </section>

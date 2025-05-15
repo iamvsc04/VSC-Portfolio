@@ -15,7 +15,7 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        background-image: radial-gradient(circle, rgba(41, 171, 226, 0.2) 2px, transparent 2px);
+        background-image: radial-gradient(circle, rgba(0, 255, 255, 0.15) 2px, transparent 2px);
         background-size: 30px 30px;
         opacity: 0.5;
         z-index: 1;
@@ -64,7 +64,7 @@
             margin-bottom: 0.5rem;
 
             .name {
-                color: #29ABE2;
+                color: #4169E1;
                 font-weight: 700;
             }
         }
@@ -80,7 +80,7 @@
             }
 
             .typed-text {
-                color: #29ABE2;
+                color: #4169E1;
                 margin-left: 0.5rem;
             }
 
@@ -93,7 +93,7 @@
             font-size: 1.1rem;
             line-height: 1.6;
             margin-bottom: 2rem;
-            opacity: 0.9;
+            color: #E0E0E0;
         }
 
         .buttons {
@@ -116,22 +116,22 @@
                 gap: 0.5rem;
 
                 &.primary-btn {
-                    background-color: #29ABE2;
+                    background-color: #00FFFF;
                     color: #13111e;
 
                     &:hover {
-                        background-color: #1c8bbd;
+                        background-color: #00E0E0;
                         transform: translateY(-3px);
                     }
                 }
 
                 &.secondary-btn {
                     background-color: transparent;
-                    color: #fff;
-                    border: 2px solid #29ABE2;
+                    color: #E0E0E0;
+                    border: 2px solid #00FFFF;
 
                     &:hover {
-                        background-color: rgba(41, 171, 226, 0.1);
+                        background-color: rgba(0, 255, 255, 0.1);
                         transform: translateY(-3px);
                     }
                 }
@@ -155,6 +155,7 @@
             max-height: 80vh;
             height: auto;
             animation: float 4s ease-in-out infinite;
+            filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.3));
         }
 
         @media screen and (max-width: 992px) {

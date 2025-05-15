@@ -2,6 +2,11 @@
 
 .about {
     padding: 2rem 0;
+    color: #e0e0e0;
+
+    .section-title {
+        color: #61dafb;
+    }
 
     .about-content {
         display: flex;
@@ -15,7 +20,7 @@
                 width: 100%;
                 max-width: 350px;
                 border-radius: 10px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             }
         }
 
@@ -25,13 +30,13 @@
             h2 {
                 font-size: 1.8rem;
                 margin-bottom: 1rem;
-                color: #333;
+                color: #61dafb;
             }
 
             p {
                 margin-bottom: 1rem;
                 line-height: 1.7;
-                color: #555;
+                color: #c0c0c0;
             }
         }
     }
@@ -45,6 +50,7 @@
             margin-bottom: 1.5rem;
             position: relative;
             display: inline-block;
+            color: #61dafb;
 
             &::after {
                 content: '';
@@ -64,24 +70,26 @@
         gap: 1.5rem;
 
         .achievement-card {
-            background-color: #fff;
+            background-color: rgba(30, 30, 46, 0.6);
             padding: 1.5rem;
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
+            border: 1px solid rgba(97, 218, 251, 0.2);
 
             &:hover {
                 transform: translateY(-5px);
+                border-color: rgba(97, 218, 251, 0.5);
             }
 
             h3 {
                 font-size: 1.3rem;
                 margin-bottom: 0.8rem;
-                color: #333;
+                color: #61dafb;
             }
 
             p {
-                color: #666;
+                color: #c0c0c0;
                 line-height: 1.6;
             }
         }
@@ -93,25 +101,27 @@
         gap: 1.5rem;
 
         .certification-card {
-            background-color: #fff;
+            background-color: rgba(30, 30, 46, 0.6);
             padding: 1.5rem;
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
+            border: 1px solid rgba(97, 218, 251, 0.2);
 
             &:hover {
                 transform: translateY(-5px);
+                border-color: rgba(97, 218, 251, 0.5);
             }
 
             h3 {
                 font-size: 1.3rem;
                 margin-bottom: 0.5rem;
-                color: #333;
+                color: #61dafb;
             }
 
             p {
                 margin-bottom: 0.5rem;
-                color: #666;
+                color: #c0c0c0;
             }
 
             a {
@@ -124,6 +134,7 @@
 
                 &:hover {
                     color: #4bc0eb;
+                    text-decoration: underline;
                 }
             }
         }

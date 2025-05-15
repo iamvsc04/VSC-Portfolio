@@ -25,8 +25,8 @@ const Projects = () => {
       image: 'https://via.placeholder.com/400x300',
       technologies: ['Vite', 'React.js', 'Bootstrap'],
       category: 'web',
-      github: 'https://github.com/iamvsc04',
-      live: 'https://example.com',
+      github: 'https://github.com/cvrcsedept/CVR-CSE',
+      live: 'https://cvr-cse.vercel.app/',
     },
     {
       id: 3,
