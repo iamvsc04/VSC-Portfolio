@@ -1,0 +1,85 @@
+// Skills.scss
+
+.skills {
+    padding: 2rem 0;
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        gap: 2rem;
+
+        .skill-category {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            .category-header {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                margin-bottom: 1.5rem;
+                padding-bottom: 0.8rem;
+                border-bottom: 1px solid #eee;
+
+                .category-icon {
+                    font-size: 1.8rem;
+                    color: #61dafb;
+                }
+
+                .category-title {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    color: #333;
+                }
+            }
+
+            .skills-list {
+                display: flex;
+                flex-direction: column;
+                gap: 1.2rem;
+
+                .skill-item {
+                    .skill-name {
+                        font-size: 1rem;
+                        font-weight: 500;
+                        margin-bottom: 0.5rem;
+                        color: #444;
+                    }
+
+                    .skill-bar {
+                        height: 10px;
+                        background-color: #f1f1f1;
+                        border-radius: 5px;
+                        overflow: hidden;
+
+                        .skill-progress {
+                            height: 100%;
+                            border-radius: 5px;
+                            background: linear-gradient(to right, #61dafb, #4a90e2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .skills-grid {
+            grid-template-columns: 1fr;
+
+            .skill-category {
+                .category-header {
+                    .category-title {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+}

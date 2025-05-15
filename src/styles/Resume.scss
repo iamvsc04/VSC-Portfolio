@@ -1,0 +1,248 @@
+// Resume.scss
+
+.resume {
+    padding: 2rem 0;
+    color: #e0e0e0;
+
+    .resume-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2.5rem;
+
+        .section-title {
+            color: #61dafb;
+        }
+
+        .resume-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                gap: 0.8rem;
+                width: 100%;
+            }
+        }
+
+        .preview-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: #4a5568;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #2d3748;
+                transform: translateY(-3px);
+            }
+        }
+
+        .download-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: #61dafb;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: #4bc0eb;
+                transform: translateY(-3px);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+
+            .section-title {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
+    .resume-preview {
+        margin-bottom: 2rem;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        iframe {
+            display: block;
+            background-color: #f8f9fa;
+        }
+    }
+
+    .resume-content {
+        .resume-section {
+            margin-bottom: 3rem;
+
+            .resume-section-title {
+                font-size: 1.8rem;
+                color: #61dafb;
+                margin-bottom: 1.5rem;
+                position: relative;
+                display: inline-block;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 50%;
+                    height: 2px;
+                    background-color: #61dafb;
+                    bottom: -5px;
+                    left: 0;
+                }
+            }
+
+            .timeline {
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 10px;
+                    top: 0;
+                    height: 100%;
+                    width: 2px;
+                    background-color: #61dafb;
+                    opacity: 0.5;
+                }
+
+                .timeline-item {
+                    position: relative;
+                    margin-bottom: 2.5rem;
+
+                    .timeline-marker {
+                        position: absolute;
+                        top: 5px;
+                        left: 6px;
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        background-color: #61dafb;
+                        border: 2px solid #1e1e2e;
+                        box-shadow: 0 0 0 2px #61dafb;
+                    }
+
+                    .timeline-content {
+                        padding: 0 0 0 30px;
+
+                        .timeline-title {
+                            font-size: 1.3rem;
+                            color: #61dafb;
+                            margin-bottom: 0.5rem;
+                        }
+
+                        .timeline-info {
+                            margin-bottom: 1rem;
+                            font-size: 0.9rem;
+                            color: #c0c0c0;
+
+                            span {
+                                display: inline-block;
+                                margin-right: 1rem;
+
+                                &:last-child {
+                                    margin-right: 0;
+                                }
+                            }
+
+                            .timeline-institution {
+                                color: #e0e0e0;
+                            }
+
+                            .timeline-location {
+                                color: #a0a0a0;
+                            }
+
+                            .timeline-period {
+                                font-weight: 600;
+                                color: #61dafb;
+                            }
+
+                            .timeline-company {
+                                color: #e0e0e0;
+                            }
+                        }
+
+                        .timeline-description {
+                            color: #c0c0c0;
+                            line-height: 1.6;
+                        }
+
+                        .timeline-responsibilities {
+                            list-style-type: disc;
+                            padding-left: 1.5rem;
+                            color: #c0c0c0;
+                            line-height: 1.6;
+
+                            li {
+                                margin-bottom: 0.5rem;
+
+                                &:last-child {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .resume-content {
+            .resume-section {
+                .timeline {
+                    &::before {
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+
+                    .timeline-item {
+                        width: 50%;
+                        padding-right: 2.5rem;
+
+                        &:nth-child(even) {
+                            margin-left: auto;
+                            padding-right: 0;
+                            padding-left: 2.5rem;
+
+                            .timeline-marker {
+                                left: -6px;
+                            }
+
+                            .timeline-content {
+                                text-align: left;
+                                padding: 0;
+                            }
+                        }
+
+                        .timeline-marker {
+                            left: auto;
+                            right: -6px;
+                        }
+
+                        .timeline-content {
+                            padding: 0;
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

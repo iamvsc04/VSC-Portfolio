@@ -1,0 +1,159 @@
+// About.scss
+
+.about {
+    padding: 2rem 0;
+
+    .about-content {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 3rem;
+
+        .about-image {
+            flex: 1;
+
+            img {
+                width: 100%;
+                max-width: 350px;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        .about-text {
+            flex: 2;
+
+            h2 {
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+                color: #333;
+            }
+
+            p {
+                margin-bottom: 1rem;
+                line-height: 1.7;
+                color: #555;
+            }
+        }
+    }
+
+    .achievements-section,
+    .certifications-section {
+        margin-top: 3rem;
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 30%;
+                height: 2px;
+                background-color: #61dafb;
+                bottom: -5px;
+                left: 0;
+            }
+        }
+    }
+
+    .achievements-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+
+        .achievement-card {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            h3 {
+                font-size: 1.3rem;
+                margin-bottom: 0.8rem;
+                color: #333;
+            }
+
+            p {
+                color: #666;
+                line-height: 1.6;
+            }
+        }
+    }
+
+    .certifications-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+
+        .certification-card {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            h3 {
+                font-size: 1.3rem;
+                margin-bottom: 0.5rem;
+                color: #333;
+            }
+
+            p {
+                margin-bottom: 0.5rem;
+                color: #666;
+            }
+
+            a {
+                display: inline-block;
+                margin-top: 0.5rem;
+                color: #61dafb;
+                text-decoration: none;
+                font-weight: 500;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: #4bc0eb;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .about-content {
+            flex-direction: column;
+
+            .about-image {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    max-width: 280px;
+                }
+            }
+
+            .about-text {
+                h2 {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .achievements-section,
+        .certifications-section {
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,221 @@
+// Statistics.scss
+
+.statistics {
+    padding: 2rem 0;
+
+    .statistics-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    // Top stats grid
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+
+        .stat-card {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            .stat-icon {
+                font-size: 2.5rem;
+                color: #61dafb;
+                margin-bottom: 1rem;
+            }
+
+            .stat-value {
+                font-size: 1.8rem;
+                font-weight: 700;
+                color: #333;
+                margin-bottom: 0.5rem;
+            }
+
+            .stat-label {
+                font-size: 1rem;
+                color: #666;
+                text-align: center;
+            }
+        }
+    }
+
+    // GitHub section
+    .github-section {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        margin-bottom: 3rem;
+
+        .subsection-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .github-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+
+            .github-stat {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .github-stat-value {
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    color: #333;
+                    margin-bottom: 0.5rem;
+                }
+
+                .github-stat-label {
+                    font-size: 0.9rem;
+                    color: #666;
+                }
+            }
+        }
+
+        .github-calendar {
+            border: 1px dashed #ddd;
+            border-radius: 8px;
+            padding: 2rem;
+
+            .placeholder-calendar {
+                height: 120px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #999;
+                font-style: italic;
+            }
+        }
+    }
+
+    // Chart section
+    .chart-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 2rem;
+
+        .language-distribution,
+        .weekly-hours {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+            .subsection-title {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+                color: #333;
+            }
+
+            .placeholder-chart {
+                min-height: 250px;
+                border: 1px dashed #ddd;
+                border-radius: 8px;
+                padding: 1.5rem;
+            }
+        }
+
+        // Languages list styling
+        .languages-list {
+            .language-item {
+                display: flex;
+                align-items: center;
+                margin-bottom: 1rem;
+
+                .language-color {
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+
+                .language-name {
+                    flex: 1;
+                    font-size: 0.9rem;
+                    color: #555;
+                }
+
+                .language-percentage {
+                    font-weight: 600;
+                    color: #333;
+                }
+            }
+        }
+
+        // Hours bars styling
+        .hours-bars {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            height: 200px;
+
+            .hour-bar-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+
+                .hour-bar {
+                    width: 25px;
+                    border-radius: 4px 4px 0 0;
+                    margin-bottom: 10px;
+                }
+
+                .day-label {
+                    font-size: 0.9rem;
+                    color: #555;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .chart-section {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .stats-grid {
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+            .stat-card {
+                .stat-icon {
+                    font-size: 2rem;
+                }
+
+                .stat-value {
+                    font-size: 1.5rem;
+                }
+
+                .stat-label {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        .github-section {
+            .github-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}

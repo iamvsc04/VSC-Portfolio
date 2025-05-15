@@ -1,0 +1,28 @@
+// Layout.scss
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.main-content {
+    flex: 1;
+    padding-top: 80px; // Only add top padding for navbar
+    overflow-x: hidden;
+    overflow-y: auto; // Only show vertical scrollbar when needed
+}
+
+// Remove all scrollbars and padding for home page
+.home-page {
+    height: 100vh;
+    overflow: hidden !important;
+}
+
+.home-page .main-content {
+    padding: 0; // Remove all padding
+    height: 100vh;
+    overflow: hidden !important;
+}

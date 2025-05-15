@@ -1,0 +1,48 @@
+// Footer.scss
+
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 2rem 0;
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+
+        .social-link {
+            color: #fff;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: #61dafb;
+            }
+        }
+    }
+
+    .copyright {
+        text-align: center;
+        font-size: 0.9rem;
+        opacity: 0.7;
+    }
+
+    @media screen and (max-width: 768px) {
+        .social-icons {
+            gap: 1rem;
+
+            .social-link {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

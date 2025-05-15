@@ -1,0 +1,174 @@
+// Contact.scss
+
+.contact {
+    padding: 2rem 0;
+
+    .contact-content {
+        display: flex;
+        gap: 2rem;
+
+        @media screen and (max-width: 992px) {
+            flex-direction: column;
+        }
+
+        .contact-info {
+            flex: 1;
+
+            .info-item {
+                display: flex;
+                margin-bottom: 1.5rem;
+
+                .info-icon {
+                    font-size: 1.5rem;
+                    color: #61dafb;
+                    width: 50px;
+                    height: 50px;
+                    background-color: rgba(97, 218, 251, 0.1);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 1rem;
+                }
+
+                .info-text {
+                    h3 {
+                        font-size: 1.2rem;
+                        margin-bottom: 0.3rem;
+                        color: #333;
+                    }
+
+                    p {
+                        color: #555;
+
+                        a {
+                            color: #555;
+                            text-decoration: none;
+                            transition: color 0.3s ease;
+
+                            &:hover {
+                                color: #61dafb;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .social-links {
+                margin-top: 2rem;
+
+                h3 {
+                    font-size: 1.2rem;
+                    margin-bottom: 1rem;
+                    color: #333;
+                }
+
+                .social-icons {
+                    display: flex;
+                    gap: 1rem;
+
+                    .social-icon {
+                        font-size: 1.2rem;
+                        color: #333;
+                        width: 40px;
+                        height: 40px;
+                        background-color: #f5f5f5;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: all 0.3s ease;
+
+                        &:hover {
+                            background-color: #61dafb;
+                            color: #fff;
+                            transform: translateY(-3px);
+                        }
+                    }
+                }
+            }
+        }
+
+        .contact-form-container {
+            flex: 1.5;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+            h2 {
+                font-size: 1.8rem;
+                margin-bottom: 1.5rem;
+                color: #333;
+            }
+
+            .contact-form {
+                .form-group {
+                    margin-bottom: 1.5rem;
+
+                    label {
+                        display: block;
+                        margin-bottom: 0.5rem;
+                        font-weight: 500;
+                        color: #555;
+                    }
+
+                    input,
+                    textarea {
+                        width: 100%;
+                        padding: 0.8rem;
+                        border: 1px solid #ddd;
+                        border-radius: 4px;
+                        font-family: inherit;
+                        font-size: 1rem;
+                        transition: border-color 0.3s ease;
+
+                        &:focus {
+                            outline: none;
+                            border-color: #61dafb;
+                        }
+                    }
+
+                    textarea {
+                        resize: vertical;
+                    }
+                }
+
+                .submit-btn {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    background-color: #61dafb;
+                    color: #fff;
+                    border: none;
+                    border-radius: 4px;
+                    padding: 0.8rem 1.5rem;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        background-color: #4bc0eb;
+                        transform: translateY(-3px);
+                    }
+
+                    &:disabled {
+                        opacity: 0.7;
+                        cursor: not-allowed;
+                        transform: none;
+                    }
+                }
+
+                .success-message {
+                    margin-top: 1rem;
+                    padding: 0.8rem;
+                    background-color: rgba(39, 174, 96, 0.1);
+                    color: #27ae60;
+                    border-radius: 4px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
