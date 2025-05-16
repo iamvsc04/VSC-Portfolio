@@ -57,11 +57,6 @@ const Projects = () => {
     },
   ];
 
-  const filteredProjects =
-    filter === "all"
-      ? projects
-      : projects.filter((project) => project.category === filter);
-
   return (
     <section className="projects">
       <div className="projects-container">
@@ -71,35 +66,8 @@ const Projects = () => {
           out!
         </p>
 
-        <div className="filter-buttons">
-          <button
-            className={`filter-btn ${filter === "all" ? "active" : ""}`}
-            onClick={() => setFilter("all")}
-          >
-            All
-          </button>
-          <button
-            className={`filter-btn ${filter === "web" ? "active" : ""}`}
-            onClick={() => setFilter("web")}
-          >
-            Web
-          </button>
-          <button
-            className={`filter-btn ${filter === "mobile" ? "active" : ""}`}
-            onClick={() => setFilter("mobile")}
-          >
-            Mobile
-          </button>
-          <button
-            className={`filter-btn ${filter === "backend" ? "active" : ""}`}
-            onClick={() => setFilter("backend")}
-          >
-            Backend
-          </button>
-        </div>
-
         <div className="projects-grid">
-          {filteredProjects.map((project) => (
+          {projects.map((project) => (
             <div key={project.id} className="project-card">
               <div className="project-image">
                 <img src={project.image} alt={project.title} />

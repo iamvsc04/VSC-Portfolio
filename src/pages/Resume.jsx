@@ -28,7 +28,7 @@ const Resume = () => {
     },
   ];
 
-  // Projects data
+  // Projects data (instead of experience)
   const projects = [
     {
       id: 1,
@@ -37,9 +37,11 @@ const Resume = () => {
       location: "",
       period: "Feb 2025 - Apr 2025",
       responsibilities: [
-        "A full-stack project management web application to improve team productivity and workflow efficiency.",
-        "Implemented Kanban boards, Gantt charts, and task assignment features with real-time updates.",
-        "Integrated role-based access control and secure authentication using JWT.",
+        "Designed and developed a full-stack project management web application using React.js, Node.js, Express.js, MongoDB, Socket.io, JWT",
+        "Implemented Kanban boards, Gantt charts, and task assignment features, improving project visibility and tracking",
+        "Enabled real-time collaboration with WebSocket-based communication, supporting instant chat, notifications, and status updates",
+        "Integrated JWT authentication and role-based access control, enhancing security and user management",
+        "Generated exportable reports (PDF/CSV) and CI/CD pipelines for deployment automation, increasing maintainability and scalability by 40%",
       ],
     },
     {
@@ -49,9 +51,10 @@ const Resume = () => {
       location: "",
       period: "Jan 2025 - Mar 2025",
       responsibilities: [
-        "Developed the official departmental website for CVR College of Engineering, improving online visibility by 50%.",
-        "Built with a responsive and accessible UI for consistent experience across all devices.",
-        "Implemented a content management system for faculty to easily update course materials.",
+        "Developed the official departmental website for CVR College of Engineering using Vite, React.js, Bootstrap",
+        "Built a responsive and accessible UI for consistent experience across devices, increasing mobile usability by 40%",
+        "Worked with faculty to organize academic content, increasing content discoverability by 35%",
+        "Optimized website performance and reduced load times, improving engagement by 30%",
       ],
     },
     {
@@ -61,9 +64,9 @@ const Resume = () => {
       location: "",
       period: "Jul 2024 - Sep 2024",
       responsibilities: [
-        "Created a real-time HTML/CSS/JS editor inspired by CodePen, allowing users to write, preview, and share code instantly.",
-        "Used Firebase to persist user code across sessions and enable collaborative editing.",
-        "Implemented syntax highlighting and code auto-completion features for improved user experience.",
+        "Developed a real-time HTML/CSS/JS editor inspired by CodePen using React.js, Node.js, Express.js, Firebase, TailwindCSS",
+        "Used Firebase to persist user code across sessions, improving reliability and user experience",
+        "Designed a responsive and customizable interface using TailwindCSS, improving usability and navigation by 25%",
       ],
     },
   ];
