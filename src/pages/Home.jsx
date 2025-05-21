@@ -26,7 +26,7 @@ const Home = () => {
                 1000,
                 "Problem Solver",
                 1000,
-                "MERN Stack Developer",
+                "Mern Stack Developer",
                 1000,
               ]}
               wrapper="span"
