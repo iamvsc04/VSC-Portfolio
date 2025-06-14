@@ -4,185 +4,119 @@
     padding: 2rem 0;
     color: #e0e0e0;
 
-
-    
-    .section-title {
-        color: #FFD700;
-        text-align: center;
-    }
-
-    .section-description {
-        color: #c0c0c0;
-        margin-bottom: 2rem;
-        text-align: center;
-    }
-
-    .contact-content {
-        display: flex;
-        gap: 2rem;
-
-        @media screen and (max-width: 992px) {
-            flex-direction: column;
-        }
-    }
-
-    .center-content {
-        min-height: 60vh;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .contact-info {
-        flex: 1;
-        max-width: 600px;
+    .contact-container {
+        max-width: 1200px;
         margin: 0 auto;
+        padding: 0 1rem;
 
-        .profiles-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-            justify-content: center;
-
-            @media screen and (max-width: 768px) {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1.2rem;
-            }
-
-            .profile-icon {
-                width: 80px;
-                height: 80px;
-                border-radius: 50%;
-                background-color: rgba(30, 30, 46, 0.8);
-                border: 2px solid rgba(255, 215, 0, 0.2);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                transition: all 0.3s ease;
-                position: relative;
-                color: #FFD700;
-                font-size: 1.8rem;
-                margin: 0 auto;
-
-                &:hover {
-                    background-color: rgba(30, 30, 46, 0.9);
-                    transform: translateY(-8px);
-                    border-color: #FFD700;
-                    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.25);
-                }
-
-                // Custom tooltip with ::after
-                &::after {
-                    content: attr(title);
-                    position: absolute;
-                    bottom: -30px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    background-color: rgba(30, 30, 46, 0.9);
-                    color: #FFD700;
-                    padding: 4px 8px;
-                    border-radius: 4px;
-                    font-size: 0.8rem;
-                    white-space: nowrap;
-                    opacity: 0;
-                    visibility: hidden;
-                    transition: all 0.3s ease;
-                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-                    border: 1px solid rgba(255, 215, 0, 0.2);
-                }
-
-                &:hover::after {
-                    opacity: 1;
-                    visibility: visible;
-                    bottom: -35px;
-                }
-            }
-        }
-    }
-
-    .contact-form-container {
-        flex: 1.5;
-        background-color: rgba(30, 30, 46, 0.6);
-        padding: 2rem;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        border: 1px solid rgba(97, 218, 251, 0.2);
-
-        h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
+        .section-title {
             color: #61dafb;
+            text-align: center;
+            margin-bottom: 1rem;
         }
 
-        .contact-form {
-            .form-group {
-                margin-bottom: 1.5rem;
+        .section-description {
+            text-align: center;
+            color: #c0c0c0;
+            margin-bottom: 3rem;
+        }
 
-                label {
-                    display: block;
-                    margin-bottom: 0.5rem;
-                    font-weight: 500;
-                    color: #e0e0e0;
-                }
+        .contact-sections {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
 
-                input,
-                textarea {
-                    width: 100%;
-                    padding: 0.8rem;
-                    border: 1px solid rgba(97, 218, 251, 0.3);
-                    background-color: rgba(255, 255, 255, 0.05);
-                    color: #e0e0e0;
-                    border-radius: 4px;
-                    font-family: inherit;
-                    font-size: 1rem;
-                    transition: border-color 0.3s ease;
+            .contact-section {
+                .section-subtitle {
+                    color: #61dafb;
+                    font-size: 1.5rem;
+                    margin-bottom: 1.5rem;
+                    position: relative;
+                    display: inline-block;
 
-                    &:focus {
-                        outline: none;
-                        border-color: #61dafb;
-                        background-color: rgba(255, 255, 255, 0.1);
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 50%;
+                        height: 2px;
+                        background-color: #61dafb;
+                        bottom: -5px;
+                        left: 0;
                     }
                 }
 
-                textarea {
-                    resize: vertical;
+                .profiles-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                    gap: 1.5rem;
+                    padding: 1rem 0;
+
+                    .profile-card {
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                        padding: 1.5rem;
+                        background: rgba(97, 218, 251, 0.05);
+                        border-radius: 8px;
+                        text-decoration: none;
+                        color: #e0e0e0;
+                        transition: all 0.3s ease;
+                        border: 1px solid rgba(97, 218, 251, 0.1);
+
+                        &:hover {
+                            transform: translateY(-5px);
+                            background: rgba(97, 218, 251, 0.1);
+                            border-color: rgba(97, 218, 251, 0.2);
+                            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+
+                            .profile-icon {
+                                transform: scale(1.1);
+                                background: rgba(97, 218, 251, 0.2);
+                            }
+                        }
+
+                        .profile-icon {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 50px;
+                            height: 50px;
+                            background: rgba(97, 218, 251, 0.1);
+                            border-radius: 50%;
+                            font-size: 1.5rem;
+                            color: #61dafb;
+                            transition: all 0.3s ease;
+                        }
+
+                        .profile-info {
+                            flex: 1;
+
+                            h3 {
+                                font-size: 1.1rem;
+                                color: #61dafb;
+                                margin-bottom: 0.3rem;
+                            }
+
+                            p {
+                                font-size: 0.9rem;
+                                color: #c0c0c0;
+                                margin: 0;
+                            }
+                        }
+                    }
                 }
             }
+        }
+    }
 
-            .submit-btn {
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
-                background-color: #61dafb;
-                color: #1e1e2e;
-                border: none;
-                border-radius: 4px;
-                padding: 0.8rem 1.5rem;
-                font-size: 1rem;
-                font-weight: 500;
-                cursor: pointer;
-                transition: all 0.3s ease;
-
-                &:hover {
-                    background-color: #4bc0eb;
-                    transform: translateY(-3px);
+    @media screen and (max-width: 768px) {
+        .contact-container {
+            .contact-sections {
+                .contact-section {
+                    .profiles-grid {
+                        grid-template-columns: 1fr;
+                    }
                 }
-
-                &:disabled {
-                    opacity: 0.7;
-                    cursor: not-allowed;
-                    transform: none;
-                }
-            }
-
-            .success-message {
-                margin-top: 1rem;
-                padding: 0.8rem;
-                background-color: rgba(39, 174, 96, 0.2);
-                color: #4ade80;
-                border-radius: 4px;
-                text-align: center;
             }
         }
     }

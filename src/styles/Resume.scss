@@ -108,41 +108,86 @@
 
             .timeline {
                 position: relative;
+                padding: 2rem 0;
 
                 &::before {
                     content: '';
                     position: absolute;
-                    left: 10px;
+                    left: 50%;
                     top: 0;
                     height: 100%;
-                    width: 2px;
-                    background-color: #61dafb;
-                    opacity: 0.5;
+                    width: 3px;
+                    background: linear-gradient(to bottom, #61dafb, #4bc0eb);
+                    transform: translateX(-50%);
+                    border-radius: 3px;
                 }
 
                 .timeline-item {
                     position: relative;
-                    margin-bottom: 2.5rem;
+                    margin-bottom: 3rem;
+                    width: 50%;
+                    padding: 0 2rem;
+
+                    &:nth-child(even) {
+                        margin-left: auto;
+                        padding-left: 2rem;
+                        padding-right: 2rem;
+
+                        .timeline-marker {
+                            left: -10px;
+                        }
+
+                        .timeline-content {
+                            text-align: left;
+                        }
+                    }
+
+                    &:nth-child(odd) {
+                        padding-right: 2rem;
+                        padding-left: 2rem;
+
+                        .timeline-marker {
+                            right: -10px;
+                        }
+
+                        .timeline-content {
+                            text-align: right;
+                        }
+                    }
 
                     .timeline-marker {
                         position: absolute;
-                        top: 5px;
-                        left: 6px;
-                        width: 12px;
-                        height: 12px;
+                        top: 0;
+                        width: 20px;
+                        height: 20px;
+                        background: #61dafb;
+                        border: 3px solid #1e1e2e;
                         border-radius: 50%;
-                        background-color: #61dafb;
-                        border: 2px solid #1e1e2e;
-                        box-shadow: 0 0 0 2px #61dafb;
+                        box-shadow: 0 0 0 4px rgba(97, 218, 251, 0.2);
+                        transition: all 0.3s ease;
+
+                        &:hover {
+                            transform: scale(1.2);
+                            box-shadow: 0 0 0 6px rgba(97, 218, 251, 0.3);
+                        }
                     }
 
                     .timeline-content {
-                        padding: 0 0 0 30px;
+                        background: rgba(97, 218, 251, 0.05);
+                        padding: 1.5rem;
+                        border-radius: 8px;
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                        transition: all 0.3s ease;
+
+                        &:hover {
+                            transform: translateY(-5px);
+                            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+                        }
 
                         .timeline-title {
                             font-size: 1.3rem;
                             color: #61dafb;
-                            margin-bottom: 0.5rem;
+                            margin-bottom: 0.8rem;
                         }
 
                         .timeline-info {
@@ -159,8 +204,10 @@
                                 }
                             }
 
-                            .timeline-institution {
+                            .timeline-institution,
+                            .timeline-company {
                                 color: #e0e0e0;
+                                font-weight: 500;
                             }
 
                             .timeline-location {
@@ -170,16 +217,16 @@
                             .timeline-period {
                                 font-weight: 600;
                                 color: #61dafb;
-                            }
-
-                            .timeline-company {
-                                color: #e0e0e0;
+                                background: rgba(97, 218, 251, 0.1);
+                                padding: 0.2rem 0.6rem;
+                                border-radius: 4px;
                             }
                         }
 
                         .timeline-description {
                             color: #c0c0c0;
                             line-height: 1.6;
+                            margin-bottom: 1rem;
                         }
 
                         .timeline-responsibilities {
@@ -187,20 +234,19 @@
                             padding-left: 0;
                             color: #c0c0c0;
                             line-height: 1.6;
-                            margin-top: 0.75rem;
 
                             li {
                                 position: relative;
                                 margin-bottom: 0.75rem;
                                 padding-left: 1.5rem;
                                 font-size: 0.95rem;
-                                text-align: justify;
                                 
                                 &:before {
                                     content: '•';
                                     position: absolute;
                                     left: 0;
                                     color: #61dafb;
+                                    font-size: 1.2rem;
                                 }
 
                                 &:last-child {
@@ -214,64 +260,31 @@
         }
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (max-width: 768px) {
         .resume-content {
             .resume-section {
                 .timeline {
                     &::before {
-                        left: 50%;
-                        transform: translateX(-50%);
+                        left: 20px;
                     }
 
                     .timeline-item {
-                        width: 50%;
-                        padding-right: 2.5rem;
+                        width: 100%;
+                        padding-left: 50px;
+                        padding-right: 0;
 
-                        &:nth-child(even) {
-                            margin-left: auto;
+                        &:nth-child(even),
+                        &:nth-child(odd) {
+                            padding-left: 50px;
                             padding-right: 0;
-                            padding-left: 2.5rem;
 
                             .timeline-marker {
-                                left: -6px;
+                                left: 10px;
+                                right: auto;
                             }
 
                             .timeline-content {
                                 text-align: left;
-                                padding: 0;
-                            }
-                            
-                            .timeline-responsibilities {
-                                li {
-                                    padding-left: 1.5rem;
-                                    text-align: justify;
-                                    
-                                    &:before {
-                                        left: 0;
-                                    }
-                                }
-                            }
-                        }
-
-                        .timeline-marker {
-                            left: auto;
-                            right: -6px;
-                        }
-
-                        .timeline-content {
-                            padding: 0;
-                            text-align: right;
-                            
-                            .timeline-responsibilities {
-                                li {
-                                    padding-right: 0;
-                                    padding-left: 1.5rem;
-                                    text-align: justify;
-                                    
-                                    &:before {
-                                        left: 0;
-                                    }
-                                }
                             }
                         }
                     }

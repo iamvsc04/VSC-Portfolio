@@ -15,6 +15,54 @@ import {
 import "../styles/Contact.scss";
 
 const Contact = () => {
+  const codingProfiles = [
+    {
+      id: 1,
+      name: "LeetCode",
+      icon: faCode,
+      url: "https://leetcode.com/Sai_Charan04",
+      description: "350+ Problems Solved"
+    },
+    {
+      id: 2,
+      name: "CodeChef",
+      icon: faLaptopCode,
+      url: "https://www.codechef.com/users/iamvsc04",
+      description: "3★ Coder"
+    },
+    {
+      id: 3,
+      name: "HackerRank",
+      icon: faTrophy,
+      url: "https://www.hackerrank.com/iamvsc04",
+      description: "Problem Solving"
+    }
+  ];
+
+  const socialProfiles = [
+    {
+      id: 1,
+      name: "GitHub",
+      icon: faGithub,
+      url: "https://github.com/iamvsc04",
+      description: "Open Source Projects"
+    },
+    {
+      id: 2,
+      name: "LinkedIn",
+      icon: faLinkedin,
+      url: "https://linkedin.com/in/sai-charan-veerlapati",
+      description: "Professional Network"
+    },
+    {
+      id: 3,
+      name: "Instagram",
+      icon: faInstagram,
+      url: "https://instagram.com/iamvsc04",
+      description: "Personal Updates"
+    }
+  ];
+
   return (
     <section className="contact">
       <div className="contact-container">
@@ -22,80 +70,53 @@ const Contact = () => {
         <p className="section-description">
           Connect with me on these platforms
         </p>
-        <div className="contact-content center-content">
-          <div className="contact-info">
-            <div className="profiles-grid">
-              {/* Coding Profiles */}
-              <a
-                href="https://leetcode.com/Sai_Charan04"
-                target="_blank"
-                rel="noreferrer"
-                className="profile-icon"
-                title="LeetCode"
-              >
-                <FontAwesomeIcon icon={faCode} />
-              </a>
-              <a
-                href="https://www.codechef.com/users/iamvsc04"
-                target="_blank"
-                rel="noreferrer"
-                className="profile-icon"
-                title="CodeChef"
-              >
-                <FontAwesomeIcon icon={faLaptopCode} />
-              </a>
-              <a
-                href="https://www.hackerrank.com/iamvsc04"
-                target="_blank"
-                rel="noreferrer"
-                className="profile-icon"
-                title="HackerRank"
-              >
-                <FontAwesomeIcon icon={faTrophy} />
-              </a>
-              <a
-                href="https://github.com/iamvsc04"
-                target="_blank"
-                rel="noreferrer"
-                className="profile-icon"
-                title="GitHub"
-              >
-                <FontAwesomeIcon icon={faGithub} />
-              </a>
 
-              {/* Personal Profiles */}
-              <a
-                href="mailto:veerlapatisaicharan04@gmail.com"
-                className="profile-icon"
-                title="Email Me"
-              >
-                <FontAwesomeIcon icon={faEnvelope} />
-              </a>
-              <a
-                href="https://linkedin.com/in/sai-charan-veerlapati"
-                target="_blank"
-                rel="noreferrer"
-                className="profile-icon"
-                title="LinkedIn"
-              >
-                <FontAwesomeIcon icon={faLinkedin} />
-              </a>
-              <a
-                href="https://instagram.com/iamvsc4"
-                target="_blank"
-                rel="noreferrer"
-                className="profile-icon"
-                title="Instagram"
-              >
-                <FontAwesomeIcon icon={faInstagram} />
-              </a>
-              <a
-                href="#"
-                className="profile-icon location"
-                title="Hyderabad, India"
-              >
-                <FontAwesomeIcon icon={faMapMarkerAlt} />
-              </a>
+        <div className="contact-sections">
+          {/* Coding Profiles Section */}
+          <div className="contact-section">
+            <h2 className="section-subtitle">Coding Profiles</h2>
+            <div className="profiles-grid">
+              {codingProfiles.map((profile) => (
+                <a
+                  key={profile.id}
+                  href={profile.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="profile-card"
+                >
+                  <div className="profile-icon">
+                    <FontAwesomeIcon icon={profile.icon} />
+                  </div>
+                  <div className="profile-info">
+                    <h3>{profile.name}</h3>
+                    <p>{profile.description}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Social Media Section */}
+          <div className="contact-section">
+            <h2 className="section-subtitle">Social Media</h2>
+            <div className="profiles-grid">
+              {socialProfiles.map((profile) => (
+                <a
+                  key={profile.id}
+                  href={profile.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="profile-card"
+                >
+                  <div className="profile-icon">
+                    <FontAwesomeIcon icon={profile.icon} />
+                  </div>
+                  <div className="profile-info">
+                    <h3>{profile.name}</h3>
+                    <p>{profile.description}</p>
+                  </div>
+                </a>
+              ))}
             </div>
           </div>
         </div>
