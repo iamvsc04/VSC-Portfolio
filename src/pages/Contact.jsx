@@ -34,7 +34,7 @@ const Contact = () => {
       id: 3,
       name: "HackerRank",
       icon: faTrophy,
-      url: "https://www.hackerrank.com/iamvsc04",
+      url: "https://www.hackerrank.com/iamvsc4",
       description: "Problem Solving"
     }
   ];
