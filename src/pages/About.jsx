@@ -14,38 +14,20 @@ const About = () => {
       title: "GATE Qualification",
       description: "Qualified in GATE-2025 (CS) on the first attempt.",
     },
-    {
-      id: 3,
-      title: "Leadership",
-      description:
-        "Served as Class Representative for three consecutive years during B.Tech, facilitating communication between faculty and students.",
-    },
   ];
 
   const certifications = [
     {
       id: 1,
-      title: "Google Cloud Generative AI Virtual Internship",
-      issuer: "Google Cloud",
-      date: "2024",
+      title: "Smart Coder Certificate",
+      issuer: "Smart Interviews",
+      date: "2025",
     },
     {
       id: 2,
-      title: "Database Design",
-      issuer: "Oracle Academy",
-      date: "2023",
-    },
-    {
-      id: 3,
-      title: "Database Programming with SQL",
-      issuer: "Oracle Academy",
-      date: "2023",
-    },
-    {
-      id: 4,
-      title: "Database Programming with PL/SQL",
-      issuer: "Oracle Academy",
-      date: "2023",
+      title: "Postman API Fundamentals Student Expert",
+      issuer: "Postman Academy",
+      date: "2024",
     },
   ];
 
@@ -53,12 +35,14 @@ const About = () => {
     <section className="about">
       <div className="about-container">
         <h1 className="section-title">About Me</h1>
-
-        <div className="about-content">
+        <p className="section-description">
+          Get to know more about my background, achievements, and
+          certifications.
+        </p>
+        <div className="about-main-card">
           <div className="about-image">
             <img src="/profile.jpg" alt="Profile" />
           </div>
-
           <div className="about-text">
             <h2>Who am I?</h2>
             <p>
@@ -85,32 +69,33 @@ const About = () => {
             </p>
           </div>
         </div>
-
-        <div className="achievements-section">
-          <h2>Achievements</h2>
-          <div className="achievements-list">
-            {achievements.map((achievement) => (
-              <div key={achievement.id} className="achievement-card">
-                <h3>{achievement.title}</h3>
-                <p>{achievement.description}</p>
-              </div>
-            ))}
+        <div className="about-cards-row">
+          <div className="about-card achievements-card">
+            <div className="about-card-header">
+              <h2>Achievements</h2>
+            </div>
+            <div className="about-card-list">
+              {achievements.map((achievement) => (
+                <div key={achievement.id} className="about-list-item">
+                  <h3>{achievement.title}</h3>
+                  <p>{achievement.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-
-        <div className="certifications-section">
-          <h2>Certifications</h2>
-          <div className="certifications-list">
-            {certifications.map((cert) => (
-              <div key={cert.id} className="certification-card">
-                <h3>{cert.title}</h3>
-                <p>Issued by: {cert.issuer}</p>
-                <p>Date: {cert.date}</p>
-                {/* <a href={cert.link} target="_blank" rel="noreferrer">
-                  View Certificate
-                </a> */}
-              </div>
-            ))}
+          <div className="about-card certifications-card">
+            <div className="about-card-header">
+              <h2>Certifications</h2>
+            </div>
+            <div className="about-card-list">
+              {certifications.map((cert) => (
+                <div key={cert.id} className="about-list-item">
+                  <h3>{cert.title}</h3>
+                  <p>Issued by: {cert.issuer}</p>
+                  <p>Date: {cert.date}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -21,22 +21,22 @@ const Contact = () => {
       name: "LeetCode",
       icon: faCode,
       url: "https://leetcode.com/Sai_Charan04",
-      description: "350+ Problems Solved"
+      description: "350+ Problems Solved",
     },
     {
       id: 2,
       name: "CodeChef",
       icon: faLaptopCode,
       url: "https://www.codechef.com/users/iamvsc04",
-      description: "3★ Coder"
+      description: "3★ Coder",
     },
     {
       id: 3,
       name: "HackerRank",
       icon: faTrophy,
       url: "https://www.hackerrank.com/iamvsc04",
-      description: "Problem Solving"
-    }
+      description: "Problem Solving",
+    },
   ];
 
   const socialProfiles = [
@@ -45,22 +45,22 @@ const Contact = () => {
       name: "GitHub",
       icon: faGithub,
       url: "https://github.com/iamvsc04",
-      description: "Open Source Projects"
+      description: "Open Source Projects",
     },
     {
       id: 2,
       name: "LinkedIn",
       icon: faLinkedin,
       url: "https://linkedin.com/in/sai-charan-veerlapati",
-      description: "Professional Network"
+      description: "Professional Network",
     },
     {
       id: 3,
       name: "Instagram",
       icon: faInstagram,
-      url: "https://instagram.com/iamvsc04",
-      description: "Personal Updates"
-    }
+      url: "https://instagram.com/iamvsc4",
+      description: "Personal Updates",
+    },
   ];
 
   return (
